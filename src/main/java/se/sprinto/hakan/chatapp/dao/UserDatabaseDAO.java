@@ -8,7 +8,7 @@ public class UserDatabaseDAO implements UserDAO {
     @Override
     public User login(String username, String password) {
         String sql = """
-            SELECT username, password 
+            SELECT id,username, password 
             FROM user
             WHERE username = ? and password = ?
             """;
